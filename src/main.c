@@ -5,7 +5,7 @@
 
 int main()
 {
-    srand(time(NULL));
+	srand(time(NULL));
 	system("clear");
 	display();
     int count = 100;
@@ -24,12 +24,19 @@ int main()
         if ((inputNum < 1) || (inputNum > 10)) {
             printf("Введите число от 1 до 10\n");
             continue;
+		}
+		if ((count != 1)&&(count < inputNum)) {
+			printf("Введите допустимое значение\n");
+			continue;
         } else
             count -= inputNum;
 		printf("Осталось спичек: %d\n", count);
         key = 2;
         if (count > 0) {
             compNum = rand() % 10 + 1;
+			while(compNum > count) {
+				compNum = rand() % 10 + 1;
+			}
             printf("Компьютер взял %d\n", compNum);
             count -= compNum;
             key = 1;
