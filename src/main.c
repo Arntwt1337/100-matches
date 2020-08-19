@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "screen.h"
 
 int main()
 {
     srand(time(NULL));
 	system("clear");
+	display();
     int count = 100;
     char compNum;
     char buf[32];
@@ -24,6 +26,7 @@ int main()
             continue;
         } else
             count -= inputNum;
+		printf("Осталось спичек: %d\n", count);
         key = 2;
         if (count > 0) {
             compNum = rand() % 10 + 1;
