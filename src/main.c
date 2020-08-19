@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "screen.h"
+#include "logic.h"
 
 int main()
 {
@@ -20,25 +21,12 @@ int main()
         if (sscanf(buf, "%d", &inputNum) != 1) {
             printf("Неправильный ввод\n");
             continue;
-        }
-        if ((inputNum < 1) || (inputNum > 10)) {
-            printf("Введите число от 1 до 10\n");
-            continue;
 		}
-		if ((count != 1)&&(count < inputNum)) {
-			printf("Введите допустимое значение\n");
-			continue;
-        } else
-            count -= inputNum;
-		printf("Осталось спичек: %d\n", count);
-        key = 2;
+		proverka(inputNum, &count);
+		key = 2;
         if (count > 0) {
             compNum = rand() % 10 + 1;
-			while(compNum > count) {
-				compNum = rand() % 10 + 1;
-			}
-            printf("Компьютер взял %d\n", compNum);
-            count -= compNum;
+			check(compNum, &count);
             key = 1;
         }
     }
