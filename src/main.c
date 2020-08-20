@@ -11,7 +11,7 @@ int main()
 	display();
     int count = 100;
     char compNum;
-    char buf[32];
+	char buf[32];
 	int inputNum;
     int key = 2;
     while (count > 0) {
@@ -19,10 +19,15 @@ int main()
         printf("Сколько спичек вы хотите взять? ");
         fgets(buf, 31, stdin);
         if (sscanf(buf, "%d", &inputNum) != 1) {
+			if(inputNum == EOF) { 
+				exit(0);
+			}
             printf("Неправильный ввод\n");
             continue;
 		}
-		proverka(inputNum, &count);
+		if (proverka(inputNum, &count)) {
+			continue;
+		}
 		key = 2;
         if (count > 0) {
             compNum = rand() % 10 + 1;

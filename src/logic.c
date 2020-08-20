@@ -6,9 +6,11 @@ int proverka(int number, int* c)
 {
     if ((number < 1) || (number > 10)) {
         printf("Введите число от 1 до 10\n");
+        return 1;
     }
-    if ((*c!= 1) && (*c < number)) {
+    if ((*c != 1) && (*c < number)) {
         printf("Введите допустимое значение\n");
+        return 1;
     } else
         *c -= number;
     printf("Осталось спичек: %d\n", *c);
