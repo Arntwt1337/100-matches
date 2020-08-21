@@ -12,9 +12,9 @@ int main()
     char buf[32];
     int inputNum;
     int key = 2;
-	char choice;
+    char choice;
     while (1) {
-	int count = 100;
+        int count = 100;
         while (count > 0) {
             printf("Осталось спичек: %d\n", count);
             printf("Сколько спичек вы хотите взять? ");
@@ -36,17 +36,17 @@ int main()
                 key = 1;
             }
         }
-		if (key == 1) {
-		printf("  Вы выиграли\n");
-		} else {
-		printf("  Вы проиграли\n");
-    	}
+        if (key == 1) {
+            printf("  Вы выиграли\n");
+        } else {
+            printf("  Вы проиграли\n");
+        }
         printf("Выйти из игры?(n) Продолжить?(y)\n");
-		scanf("%c%*c", &choice);
-        if (choice == 'n' || choice == 'N') 
-			exit(0);
-		if (choice == 'y' || choice == 'Y')
-			display();
+        scanf("%c%*c", &choice);
+        if (choice == 'n' || choice == 'N')
+            exit(0);
+        if (choice == 'y' || choice == 'Y')
+            display();
     }
     return 0;
 }
