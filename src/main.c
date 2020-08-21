@@ -18,11 +18,8 @@ int main()
         while (count > 0) {
             printf("Осталось спичек: %d\n", count);
             printf("Сколько спичек вы хотите взять? ");
-            fgets(buf, 31, stdin);
+            fgets(buf, 32, stdin);
             if (sscanf(buf, "%d", &inputNum) != 1) {
-                if (inputNum == EOF) {
-                    exit(0);
-                }
                 printf("Неправильный ввод\n");
                 continue;
             }
