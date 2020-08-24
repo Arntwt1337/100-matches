@@ -24,5 +24,9 @@ $(EXE): $(PAT)
 $(TEST_EXE):$(patsubst test/%.c, build/test/%.o, $(wildcard test/*.c)) $(patsubst build/src/main.o, , $(PAT))
 	$(CC) $^ -o $@ $(FLAGS)
 
+begin_test:
+	./$(TEST_EXE)
+
+
 clean:
 	rm -rf build bin
