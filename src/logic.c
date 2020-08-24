@@ -8,6 +8,10 @@ int proverka(int number, int* c)
         printf("Введите число от 1 до 10\n");
         return 1;
     }
+	return 0;
+}
+int proverka2(int number, int* c) 
+{
     if ((*c != 1) && (*c < number)) {
         printf("Введите допустимое значение\n");
         return 1;

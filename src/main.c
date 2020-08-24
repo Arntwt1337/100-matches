@@ -26,6 +26,9 @@ int main()
             if (proverka(inputNum, &count)) {
                 continue;
             }
+			if (proverka2(inputNum, &count)) {
+				continue;
+			}
             key = 2;
             if (count > 0) {
                 compNum = rand() % 10 + 1;
