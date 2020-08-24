@@ -2,4 +2,4 @@ language: c
 compiler: gcc
 dist: xenial
 script:
-    - make && make test make begin_test
+    - make && make test && make begin_test

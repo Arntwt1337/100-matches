@@ -27,6 +27,5 @@ $(TEST_EXE):$(patsubst test/%.c, build/test/%.o, $(wildcard test/*.c)) $(patsubs
 begin_test:
 	./$(TEST_EXE)
 
-
 clean:
 	rm -rf build bin
