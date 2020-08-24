@@ -1,6 +1,7 @@
 #include "logic.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 int check_inputNum(int number, int* c)
 {
