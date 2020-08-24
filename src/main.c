@@ -23,16 +23,16 @@ int main()
                 printf("Неправильный ввод\n");
                 continue;
             }
-            if (proverka(inputNum, &count)) {
+            if (check_inputNum(inputNum, &count)) {
                 continue;
             }
-			if (proverka2(inputNum, &count)) {
+			if (check_inputNum2(inputNum, &count)) {
 				continue;
 			}
             key = 2;
             if (count > 0) {
                 compNum = rand() % 10 + 1;
-                check(compNum, &count);
+                check_compNum(compNum, &count);
                 key = 1;
             }
         }

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int proverka(int number, int* c)
+int check_inputNum(int number, int* c)
 {
     if ((number < 1) || (number > 10)) {
         printf("Введите число от 1 до 10\n");
@@ -10,17 +10,17 @@ int proverka(int number, int* c)
     }
 	return 0;
 }
-int proverka2(int number, int* c) 
+int check_inputNum2(int number, int* c) 
 {
-    if ((*c != 1) && (*c < number)) {
-        printf("Введите допустимое значение\n");
-        return 1;
+    if (*c < number) {
+		printf("Введите допустимое значение\n");
+    	return 1;
     } else
         *c -= number;
     printf("Осталось спичек: %d\n", *c);
     return 0;
 }
-int check(int quantity, int* c)
+int check_compNum(int quantity, int* c)
 {
     while (quantity > *c) {
         quantity = rand() % 10 + 1;
