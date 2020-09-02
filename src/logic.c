@@ -7,9 +7,9 @@ int check_inputNum(int number, int* c)
 {
     if ((number < 1) || (number > 10)) {
         printf("Введите число от 1 до 10\n");
-        return 1;
+        return 0;
     }
-	return 0;
+	return 1;
 }
 int check_inputNum2(int number, int* c) 
 {

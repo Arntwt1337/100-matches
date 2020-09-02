@@ -23,7 +23,7 @@ int main()
                 printf("Неправильный ввод\n");
                 continue;
             }
-            if (check_inputNum(inputNum, &count)) {
+            if (check_inputNum(inputNum, &count) == 0) {
                 continue;
             }
 			if (check_inputNum2(inputNum, &count)) {
