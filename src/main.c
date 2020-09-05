@@ -24,22 +24,25 @@ int main()
                 continue;
             }
             if (check_inputNum(inputNum, &count) == 0) {
-				printf("Введите число от 1 до 10\n");
+                printf("Введите число от 1 до 10\n");
                 continue;
             }
-			if (check_inputNum2(inputNum, &count) == 0) {
-				printf("Введите допустимое значение\n");
-				continue;
-			}
-			printf("Осталось спичек: %d\n", count);
+            if (check_inputNum2(inputNum, &count) == 0) {
+                printf("Введите допустимое значение\n");
+                continue;
+            }
+            printf("Осталось спичек: %d\n", count);
             key = 2;
             if (count > 0) {
                 compNum = rand() % 10 + 1;
-				if ((count == 11)||(count == 9)||(count == 7)||(count == 5)||(count == 2)) {
-					compNum = count-1;
-				}
-                check_compNum(compNum, &count);
-				printf("Компьютер взял: %d\n", compNum);
+                if ((count == 11) || (count == 9) || (count == 7)
+                    || (count == 5) || (count == 2)) {
+                    compNum = count - 1;
+                }
+                if (check_compNum(compNum, &count) == 0) {
+                    continue;
+                }
+                printf("Компьютер взял: %d\n", compNum);
                 key = 1;
             }
         }
