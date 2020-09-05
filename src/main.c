@@ -35,13 +35,24 @@ int main()
             key = 2;
             if (count > 0) {
                 compNum = rand() % 10 + 1;
- 				if (check_compNum(compNum, &count) == 0) {    
-                        compNum = rand() % count;
-                        if (compNum == 0) {
-                            compNum += 1;
-                        }
-                count -= compNum;
-				}
+                if ((count == 22) || (count == 21) || (count == 20)
+                    || (count == 19) || (count == 18) || (count == 17)
+                    || (count == 16) || (count == 15) || (count == 14)
+                    || (count == 13)) {
+                    compNum = count - 12;
+                }
+                if ((count == 11) || (count == 10) || (count == 9)
+                    || (count == 8) || (count == 7) || (count == 5)
+                    || (count == 2)) {
+                    compNum = count - 1;
+                }
+                if (check_compNum(compNum, &count) == 0) {
+                    compNum = rand() % count;
+                    if (compNum == 0) {
+                        compNum += 1;
+                    }
+                    count -= compNum;
+                }
                 printf("Компьютер взял: %d\n", compNum);
                 key = 1;
             }
