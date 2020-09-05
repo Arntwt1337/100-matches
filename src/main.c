@@ -34,7 +34,7 @@ int main()
             printf("Осталось спичек: %d\n", count);
             key = 2;
             if (count > 0) {
-                compNum = rand() % 10 + 1;
+                compNum = rand() % 10;
                 if ((count == 11) || (count == 9) || (count == 7)
                     || (count == 5) || (count == 2)) {
                     compNum = count - 1;

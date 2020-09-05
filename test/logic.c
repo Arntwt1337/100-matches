@@ -34,3 +34,22 @@ CTEST(logic_suite, check_inputNum2)
     check_inputNum2(inputNum, &count);
     ASSERT_TRUE(check_inputNum2(inputNum, &count));
 }
+CTEST(logic_suite, check_compNum)
+{
+    int compNum = 9;
+    int count = 4;
+	check_compNum(compNum, &count);
+	ASSERT_FALSE(check_compNum(compNum, &count));
+    compNum = 0;
+    count = 6;
+	check_compNum(compNum, &count);
+	ASSERT_FALSE(check_compNum(compNum, &count));
+    compNum = 3;
+    count = 6;
+	check_compNum(compNum, &count);
+	ASSERT_TRUE(check_compNum(compNum, &count));
+    compNum = 7;
+    count = 15;
+	check_compNum(compNum, &count);
+	ASSERT_TRUE(check_compNum(compNum, &count));
+}
