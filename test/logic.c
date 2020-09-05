@@ -19,4 +19,18 @@ CTEST(logic_suite, check_inputNum2) {
 	int count = 4;
 	check_inputNum2(inputNum, &count);
 	ASSERT_FALSE(check_inputNum2(inputNum, &count));
+	inputNum = 7;
+	count = 1;
+	check_inputNum2(inputNum, &count);
+	ASSERT_FALSE(check_inputNum2(inputNum, &count));
+	inputNum = 3;
+	count = 6;
+	check_inputNum2(inputNum, &count);
+	ASSERT_TRUE(check_inputNum2(inputNum, &count));
+	inputNum = 9;
+	count = 26;
+	check_inputNum2(inputNum, &count);
+	ASSERT_TRUE(check_inputNum2(inputNum, &count));
+
+
 }

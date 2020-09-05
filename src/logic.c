@@ -16,7 +16,6 @@ int check_inputNum2(int number, int* c)
     	return 0;
     } else
         *c -= number;
-    printf("Осталось спичек: %d\n", *c);
     return 1;
 }
 int check_compNum(int quantity, int* c)
@@ -24,7 +23,6 @@ int check_compNum(int quantity, int* c)
     while (quantity > *c) {
         quantity = rand() % 10 + 1;
     }
-    printf("Компьютер взял %d\n", quantity);
     *c -= quantity;
-    return 0;
+    return 1;
 }
