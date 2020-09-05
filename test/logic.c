@@ -14,3 +14,9 @@ CTEST(logic_suite, check_inputNum) {
 	inputNum = 10;
 	ASSERT_TRUE(check_inputNum(inputNum, &count));
 }
+CTEST(logic_suite, check_inputNum2) {
+	int inputNum = 5;
+	int count = 4;
+	check_inputNum2(inputNum, &count);
+	ASSERT_FALSE(check_inputNum2(inputNum, &count));
+}

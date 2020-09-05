@@ -24,9 +24,11 @@ int main()
                 continue;
             }
             if (check_inputNum(inputNum, &count) == 0) {
+				printf("Введите число от 1 до 10\n");
                 continue;
             }
-			if (check_inputNum2(inputNum, &count)) {
+			if (check_inputNum2(inputNum, &count) == 0) {
+				printf("Введите допустимое значение\n");
 				continue;
 			}
             key = 2;
