@@ -40,7 +40,7 @@ CTEST(logic_suite, check_compNum)
     int count = 4;
 	check_compNum(compNum, &count);
 	ASSERT_FALSE(check_compNum(compNum, &count));
-    compNum = 0;
+    compNum = 7;
     count = 6;
 	check_compNum(compNum, &count);
 	ASSERT_FALSE(check_compNum(compNum, &count));

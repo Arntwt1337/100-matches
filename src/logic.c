@@ -20,7 +20,7 @@ int check_inputNum2(int number, int* c)
 }
 int check_compNum(int quantity, int* c)
 {
-    while ((quantity > *c)||(quantity == 0)) {
+    while (quantity > *c) {
         return 0;
     }
     *c -= quantity;

@@ -34,14 +34,14 @@ int main()
             printf("Осталось спичек: %d\n", count);
             key = 2;
             if (count > 0) {
-                compNum = rand() % 10;
-                if ((count == 11) || (count == 9) || (count == 7)
-                    || (count == 5) || (count == 2)) {
-                    compNum = count - 1;
-                }
-                if (check_compNum(compNum, &count) == 0) {
-                    continue;
-                }
+                compNum = rand() % 10 + 1;
+ 				if (check_compNum(compNum, &count) == 0) {    
+                        compNum = rand() % count;
+                        if (compNum == 0) {
+                            compNum += 1;
+                        }
+                count -= compNum;
+				}
                 printf("Компьютер взял: %d\n", compNum);
                 key = 1;
             }
